@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATEMATIK REACTOR - Интерактивті құрылғы</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #10b981;
+            --accent-color: #f59e0b;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e40af, var(--primary-color));
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-card {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        table, th, td {
+            border: 1px solid #cbd5e1;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #059669;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #1e293b;
+            color: white;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MATEMATIK REACTOR</h1>
+        <p>Arduino негізіндегі бастауыш сынып оқушыларына арналған интерактивті оқу құрылғысы</p>
+    </header>
+
+    <nav>
+        <a href="#about">Жоба туралы</a>
+        <a href="#features">Мүмкіндіктері</a>
+        <a href="#hardware">Бөлшектері</a>
+        <a href="#results">Нәтижелер</a>
+    </nav>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2>Жоба туралы</h2>
+            <p><strong>«MATEMATIK REACTOR»</strong> — бастауыш сынып оқушыларының математикалық есептерді ойша тез әрі дәл шығару дағдыларын дамытуға арналған шағын электрондық құрылғы. Жоба заманауи технологиялар мен оқыту үдерісін біріктіріп, оқушылардың пәнге деген қызығушылығын арттырады.</p>
+            <a href="#features" class="cta-btn">Толығырақ көру</a>
+        </section>
+
+        <section id="features">
+            <h2>Құрылғының мүмкіндіктері</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>➕ ➖ ✖️ ➗</h3>
+                    <p>Төрт негізгі арифметикалық амал бойынша тапсырмалар ұсынады.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ Жылдам кері байланыс</h3>
+                    <p>Дұрыс жауапқа жасыл шам мен дыбыс беріліп, нәтиже бірден көрінеді.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⏱️ Уақытты бақылау</h3>
+                    <p>10 есепті орындауға кеткен уақыт пен қате/дұрыс санын автоматты есептейді.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hardware">
+            <h2>Қолданылған бөлшектер (Arduino)</h2>
+            <table>
+                <tr>
+                    <th>№</th>
+                    <th>Бөлшек атауы</th>
+                    <th>Қызметі</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Arduino Uno</td>
+                    <td>Құрылғыны басқару және бағдарламаны орындау</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>LCD 1602 I2C экраны</td>
+                    <td>Есептер мен нәтижелерді көрсету</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Батырмалар (3 дана)</td>
+                    <td>Жауап нұсқаларын таңдау</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Жасыл және қызыл LED</td>
+                    <td>Дұрыс / қате жауапты белгілеу</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Зуммер (Buzzer)</td>
+                    <td>Дыбыстық белгі беру</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="results">
+            <h2>Тәжірибе нәтижелері</h2>
+            <p>«Есет мектеп – бөбекжай кешені» КММ оқушыларымен жүргізілген тәжірибе көрсеткіштері:</p>
+            <table>
+                <tr>
+                    <th>Көрсеткіш</th>
+                    <th>Бастапқы</th>
+                    <th>Кейінгі (Құрылғымен)</th>
+                    <th>Өзгеріс</th>
+                </tr>
+                <tr>
+                    <td>Орташа уақыт</td>
+                    <td>52.5 сек.</td>
+                    <td>43.7 сек.</td>
+                    <td>8.8 секундқа азайды (~16.8%)</td>
+                </tr>
+                <tr>
+                    <td>Орташа дұрыс жауап</td>
+                    <td>7.2</td>
+                    <td>8.2</td>
+                    <td>1 ұпайға артты</td>
+                </tr>
+            </table>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MATEMATIK REACTOR жобасы. Барлық құқықтар қорғалған.</p>
+    </footer>
+
+</body>
+</html>
